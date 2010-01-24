@@ -16,7 +16,7 @@ Installing django-orderable is simple, just complete the following steps:
 
 1. Clone the [django-orderable](http://github.com/tkaemming/django-orderable)
 repository from [GitHub](http://www.github.com/).
-2. Add the "orderable" directory to your PYTHONPATH.
+2. Run `python setup.py install` to install the module package.
 3. Add "orderable" to the INSTALLED_APPS tuple for your Django project.
 4. Add the following line to your URLconf: 
    `(r'^admin/order/', include('orderable.urls'))`.
