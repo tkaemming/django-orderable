@@ -26,6 +26,12 @@ repository from [GitHub](http://www.github.com/).
    attribute defaults to 100). If you're looking to order an inordinate number
    of model instances, you might want to look elsewhere for your ordering 
    solution.
+   
+### Adding Orderable Administration Inlines
+
+You can also create orderable inlines in your administration site by creating
+inlines that extend `orderable.admin.OrderableStackedInline` or 
+`orderable.admin.OrderableTabularInline`.
   
 ## Usage
 
