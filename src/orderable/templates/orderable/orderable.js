@@ -48,11 +48,7 @@
         if ($('body.change-form').length > 0) {
             var orderableInlines = $('.orderable');
             orderableInlines.each(function (i) {
-                var orderable = $(this)
-                    isTabular = orderable.is('has:(.tabular)'),
-                    isStacked = orderable.is('has:(.stacked)');
-                
-                console.log(isTabular, isStacked);
+                var orderable = $(this);
             });
         }
         

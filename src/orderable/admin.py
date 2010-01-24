@@ -1,3 +1,4 @@
+from django import forms
 from django.contrib import admin
 
 class OrderableAdmin(admin.ModelAdmin):
@@ -15,8 +16,18 @@ class OrderableAdmin(admin.ModelAdmin):
         if self.order_field not in self.list_editable:
             self.list_editable = list(self.list_editable) + [self.order_field]
 
-class OrderableStackedInline(admin.StackedInline):
+class OrderableInline(object):
+    def _media(self):
+        from django.core.urlresolvers import reverse
+        return forms.Media(js=(
+            'http://ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js',
+            'http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js',
+            reverse('orderable:javascript'),
+        ))
+    media = property(_media)
+
+class OrderableStackedInline(OrderableInline, admin.StackedInline):
     template = 'orderable/edit_inline/stacked.html'
 
-class OrderableTabularInline(admin.TabularInline):
+class OrderableTabularInline(OrderableInline, admin.TabularInline):
     template = 'orderable/edit_inline/tabular.html'
