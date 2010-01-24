@@ -46,9 +46,49 @@
         }
         
         if ($('body.change-form').length > 0) {
-            var orderableInlines = $('.orderable');
-            orderableInlines.each(function (i) {
-                var orderable = $(this);
+            $('.orderable').each(function (i) {
+                var inline = $(this);
+                
+                // Tabular Inlines
+                if (inline.is(':has(.tabular)')) {
+                    // Hide the unnecessary, ordering fields.
+                    inline.find('th:contains(Order)').hide();
+                    inline.find('td.original').hide();
+                    inline.find('input[name$="-order"]').closest('td').hide();
+                    inline.find('tbody tr.has_original').removeClass('has_original');
+                    inline.find('tbody tr').css('cursor', 'move');
+                    
+                    inline.find('tbody').sortable({
+                        'update': function (event, ui) {
+                            var rows = inline.find('tbody tr');
+                            rows.each(function (i) {
+                                var row = $(this),
+                                    orderField = row.find('input[name$="-order"]');
+                                orderField.val(i + 1);
+                            });
+                            rows.filter(':even').addClass('row1').removeClass('row2');
+                            rows.filter(':odd').addClass('row2').removeClass('row1');
+                        }
+                    });
+                }
+                // Stacked Inlines
+                else {
+                    inline.find('.form-row.order').hide();
+                    inline.find('.inline-group h3').css('cursor', 'move');
+                    
+                    inline.find('.inline-group').sortable({
+                        'handle': 'h3',
+                        'update': function (event, ui) {
+                            var forms = inline.find('.inline-related');
+                            forms.each(function (i) {
+                                var form = $(this),
+                                    orderField = form.find('input[name$="order"]');
+                                orderField.val(i + 1);
+                            });
+                        }
+                    });
+                }
+                
             });
         }
         
