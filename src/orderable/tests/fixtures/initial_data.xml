@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<django-objects version="1.0">
+  <object pk="1" model="auth.user">
+    <field type="CharField" name="username">admin</field>
+    <field type="CharField" name="first_name">Ted</field>
+    <field type="CharField" name="last_name">Kaemming</field>
+    <field type="CharField" name="email">ted@kaemming.com</field>
+    <field type="CharField" name="password">sha1$df7fb$b101a7f9f0eda48c7e2e500ded0e50eda6943004</field>
+    <!-- Password: "password" -->
+    <field type="BooleanField" name="is_staff">1</field>
+    <field type="BooleanField" name="is_active">1</field>
+    <field type="BooleanField" name="is_superuser">1</field>
+  </object>
+  <object pk="1" model="tests.book">
+    <field type="PositiveIntegerField" name="order">1</field>
+    <field type="CharField" name="title">International Economics</field>
+    <field type="CharField" name="author">Thomas A. Pugel</field>
+    <field type="PositiveIntegerField" name="pages">757</field>
+  </object>
+  <object pk="2" model="tests.book">
+    <field type="PositiveIntegerField" name="order">2</field>
+    <field type="CharField" name="title">On Writing Well</field>
+    <field type="CharField" name="author">William Zinsser</field>
+    <field type="PositiveIntegerField" name="pages">321</field>
+  </object>
+  <object pk="3" model="tests.book">
+    <field type="PositiveIntegerField" name="order">3</field>
+    <field type="CharField" name="title">Domain-Driven Design</field>
+    <field type="CharField" name="author">Eric Evans</field>
+    <field type="PositiveIntegerField" name="pages">529</field>
+  </object>
+</django-objects>
