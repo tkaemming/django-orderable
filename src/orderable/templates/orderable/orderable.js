@@ -33,17 +33,27 @@
                 }
             });
             
+            window.onbeforeunload = function (event) {
+                // TODO: Make sure that explicitOriginalTarget is standard API for this event.
+                if ($('.updated-order').length > 0 && $(event.explicitOriginalTarget).is(':not(:submit)')) {
+                    var verboseNamePlural = 'objects';
+                    if ($('#verbose-name-plural').length == 1) {
+                        verboseNamePlural = $('#verbose-name-plural').text();
+                    }
+                    return 'You have updated the order of your ' + verboseNamePlural + '.';
+                }
+            }
         }
         
-        window.onbeforeunload = function (event) {
-            // TODO: Make sure that explicitOriginalTarget is standard API for this event.
-            if ($('.updated-order').length > 0 && $(event.explicitOriginalTarget).is(':not(:submit)')) {
-                var verboseNamePlural = 'objects';
-                if ($('#verbose-name-plural').length == 1) {
-                    verboseNamePlural = $('#verbose-name-plural').text();
-                }
-                return 'You have updated the order of your ' + verboseNamePlural + '.';
-            }
+        if ($('body.change-form').length > 0) {
+            var orderableInlines = $('.orderable');
+            orderableInlines.each(function (i) {
+                var orderable = $(this)
+                    isTabular = orderable.is('has:(.tabular)'),
+                    isStacked = orderable.is('has:(.stacked)');
+                
+                console.log(isTabular, isStacked);
+            });
         }
         
     });

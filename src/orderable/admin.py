@@ -16,7 +16,7 @@ class OrderableAdmin(admin.ModelAdmin):
             self.list_editable = list(self.list_editable) + [self.order_field]
 
 class OrderableStackedInline(admin.StackedInline):
-    pass
+    template = 'orderable/edit_inline/stacked.html'
 
 class OrderableTabularInline(admin.TabularInline):
-    pass
+    template = 'orderable/edit_inline/tabular.html'
