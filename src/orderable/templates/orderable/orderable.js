@@ -1,47 +1,51 @@
-/*
+(function ($) {
     
-    Django Administration Ordering
-    by Ted Kaemming <ted@kaemming.com>
-    
-    Requires jQuery and jQuery UI.
-    
-*/
-
-$(document).ready(function (event) {
-    
-    $('div#changelist tbody').sortable({
-        items: 'tr',
-        handle: 'th:first',
-        update: function() {
-            var parameters = {
-                    'app_label': Orderable.app_label,
-                    'model_name': Orderable.model_name,
-                },
-                rows = $(this).find('tr');
-                
-            rows.each(function (i) {
-                var orderField = $(this).find('input.ordering');
-                orderField.val(i + 1);
-                parameters[orderField.attr('name')] = orderField.val();
-            });
+    $(document).ready(function (event) {
+        
+        if ($('body.change-list').length > 0) {
+            var orderHeader = $('th:contains(Order)'),
+                orderFields = $('input[name$="-order"]'),
+                orderCells = orderFields.closest('td');
             
-            $.post('{% url orderable_order_objects %}', parameters);
+            orderHeader.hide();
+            orderCells.hide();
             
-            rows.each(function (i) {
-                var row = $(this);
-                row.removeClass('row1').removeClass('row2');
-                if (i % 2 == 0) {
-                    row.addClass('row1');
-                }
-                else {
-                    row.addClass('row2');
+            $('div#changelist tbody').sortable({
+                items: 'tr',
+                handle: 'th:first',
+                update: function () {
+                    var rows = $(this).find('tr');
+                    
+                    rows.each(function (i) {
+                        var row = $(this),
+                            orderField = row.find('input[name$="-order"]'),
+                            oldValue = orderField.val(),
+                            newValue = i + 1;
+                        
+                        if (oldValue != newValue) {
+                            row.addClass('updated-order');
+                            orderField.val(i + 1);
+                        }
+                    });
+                    
+                    rows.filter(':odd').addClass('row2').removeClass('row1');
+                    rows.filter(':even').addClass('row1').removeClass('row2');
                 }
             });
+            
         }
+        
+        window.onbeforeunload = function (event) {
+            // TODO: Make sure that explicitOriginalTarget is standard API for this event.
+            if ($('.updated-order').length > 0 && $(event.explicitOriginalTarget).is(':not(:submit)')) {
+                var verboseNamePlural = 'objects';
+                if ($('#verbose-name-plural').length == 1) {
+                    verboseNamePlural = $('#verbose-name-plural').text();
+                }
+                return 'You have updated the order of your ' + verboseNamePlural + '.';
+            }
+        }
+        
     });
     
-    $('div#changelist tbody th:first').css('cursor', 'move');
-    $('div#changelist thead tr th:last').hide();
-    $('div#changelist tbody').find('input.ordering').parent('td').hide();
-    
-});
+})(jQuery);
