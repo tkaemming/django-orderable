@@ -19,8 +19,8 @@ repository from [GitHub](http://www.github.com/).
     </code>
     
 5. For any models that you would like to be ordered through the change list, 
-   have these models extend `orderable.models.Orderable`, and have their admin
-   objects implement or extend `orderable.admin.OrderableAdmin`.
+   have these models extend `orderable.models.OrderableModel`, and have their
+   admin classes implement or extend `orderable.admin.OrderableAdmin`.
 6. Make sure that in your ModelAdmin, the `list_per_page` attribute is set 
    to a value that is greater than the possible number of objects (this 
    attribute defaults to 100). If you're looking to order an inordinate number
