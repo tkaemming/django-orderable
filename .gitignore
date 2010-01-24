@@ -1,2 +1,9 @@
 .DS_Store
 *.pyc
+
+test.db
+
+# Ignore any files and directories created by setuptools...
+build/
+dist/
+*.egg-info

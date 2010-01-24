@@ -1,0 +1,29 @@
+{% extends "admin/change_list.html" %}
+
+{% block extrahead %}
+  
+  {% block jquery %}
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js"></script>
+  {% endblock %}
+  
+  {% block orderable_javascript %}
+    <script type="text/javascript" src="{% url orderable:javascript %}"></script>
+  {% endblock %}
+  
+{% endblock %}
+
+{% block content_title %}
+  
+  {{ block.super }}
+  
+  {% block orderable_help_text %}
+    <p class="help">
+      <strong>TIP:</strong> You can drag and drop the 
+      <span id="verbose-name-plural">{{ cl.opts.verbose_name_plural }}</span> 
+      in this list to change their order on the site &mdash; just be sure to 
+      click the Save button in the lower right of the list when you're done!
+    </p>
+  {% endblock %}
+
+{% endblock %}
