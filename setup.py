@@ -12,6 +12,15 @@ setup(
     
     packages = find_packages('src'),
     package_dir = {'': 'src'},
+    package_data = {
+        'orderable': [
+            'templates/orderable/change_list.html',
+            'templates/orderable/edit_inline/stacked.html',
+            'templates/orderable/edit_inline/tabular.html',
+            'templates/orderable/orderable.js',
+        ]
+    },
     
-    install_requires = ['setuptools']
+    install_requires = ['setuptools'],
+    zip_safe = False
 )
