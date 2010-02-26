@@ -3,7 +3,7 @@
     $(document).ready(function (event) {
         
         if ($('body.change-list').length > 0) {
-            var orderHeader = $('th:contains(Order)'),
+            var orderHeader = $('thead th:contains(Order)'),
                 orderFields = $('input[name$="-order"]'),
                 orderCells = orderFields.closest('td');
             
