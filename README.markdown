@@ -10,14 +10,7 @@ Installing django-orderable is simple, just complete the following steps:
 repository from [GitHub](http://www.github.com/).
 2. Run `python setup.py install` to install the module package.
 3. Add `orderable` to the `INSTALLED_APPS` tuple for your Django project.
-4. Add the following to your root URLconf:
-    <code>
-        url(
-            regex = r'^admin/orderable/',
-            view  = include('orderable.urls', namespace='orderable'),
-        ),
-    </code>
-    
+4. Make sure the `orderable.js` file is served by your favorite web server.
 5. For any models that you would like to be ordered through the change list, 
    have these models extend `orderable.models.OrderableModel`, and have their
    admin classes implement or extend `orderable.admin.OrderableAdmin`.
