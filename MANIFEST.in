@@ -1,0 +1,4 @@
+include README.markdown
+include LICENSE.markdown
+recursive-include src/orderable/locale *
+recursive-include src/orderable/templates *.html *.js
