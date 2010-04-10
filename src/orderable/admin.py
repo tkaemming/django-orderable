@@ -4,6 +4,7 @@ from django.contrib import admin
 class OrderableAdmin(admin.ModelAdmin):
     exclude = ('order',)
     order_field = 'order'
+    ordering = ('order',)
     
     change_list_template = 'orderable/change_list.html'
     
