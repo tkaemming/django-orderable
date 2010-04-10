@@ -1,5 +1,8 @@
+import posixpath
 from django import forms
 from django.contrib import admin
+
+from orderable.settings import JQUERY_URL, JQUERYUI_URL, ORDERABLE_MEDIA_URL
 
 class OrderableAdmin(admin.ModelAdmin):
     exclude = ('order',)
@@ -7,6 +10,10 @@ class OrderableAdmin(admin.ModelAdmin):
     ordering = ('order',)
     
     change_list_template = 'orderable/change_list.html'
+    
+    class Media:
+        js = (JQUERY_URL, JQUERYUI_URL,
+              posixpath.join(ORDERABLE_MEDIA_URL, 'orderable/orderable.js'))
     
     def __init__(self, *args, **kwargs):
         super(OrderableAdmin, self).__init__(*args, **kwargs)
@@ -18,14 +25,10 @@ class OrderableAdmin(admin.ModelAdmin):
             self.list_editable = list(self.list_editable) + [self.order_field]
 
 class OrderableInline(object):
-    def _media(self):
-        from django.core.urlresolvers import reverse
-        return forms.Media(js=(
-            'http://ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js',
-            'http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js',
-            reverse('orderable:javascript'),
-        ))
-    media = property(_media)
+
+    class Media:
+        js = (JQUERY_URL, JQUERYUI_URL,
+              posixpath.join(ORDERABLE_MEDIA_URL, 'orderable/orderable.js'))
 
 class OrderableStackedInline(OrderableInline, admin.StackedInline):
     template = 'orderable/edit_inline/stacked.html'
