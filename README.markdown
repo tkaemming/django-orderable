@@ -35,3 +35,8 @@ instances. There are a lot of cases where this application isn't the
 appropriate solution (at least currently), such as objects that are ordered
 with respect to a related object, situations where the list_filter will be
 implemented, etc.
+
+## Authors
+
+* [Ted Kaemming](http://www.kaemming.com/)
+* [Jannis Leidel](http://jezdez.me/)
