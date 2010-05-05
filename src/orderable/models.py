@@ -7,16 +7,27 @@ class OrderableModel(models.Model):
     """
     order = models.PositiveIntegerField(blank=True, null=True)
     
+    def _get_ordering_queryset(self):
+        """
+        Returns the queryset used for model ordering. 
+        
+        This can helpful (or even required) in some special cases, such as
+        using model inheritance or polymorphic model implementations where the
+        models returned by the default manager are not necessarily those that
+        should be ordered on.
+        """
+        return self.__class__._default_manager.all()
+    
     def save(self, *args, **kwargs):
         """
         Save the current model instance, and set the model order if none has
         been previously set.
         """
-        manager = self.__class__._default_manager
+        queryset = self._get_ordering_queryset()
         
         if self.order is None:
             try:
-                last_object = manager.order_by('-order', '-id')[0:1].get()
+                last_object = queryset.order_by('-order', '-id')[0:1].get()
                 if last_object.order is not None:
                     self.order = last_object.order + 1
             except ObjectDoesNotExist:
@@ -36,8 +47,8 @@ class OrderableModel(models.Model):
         Throws (or technically, allows to bubble up) the appropriate 
         ObjectDoesNotExist exception if the object does not exist.
         """
-        manager = self.__class__._default_manager
-        return manager.order_by('-order', '-id').filter(order__lt=self.order)[0:1].get()
+        queryset = self._get_ordering_queryset()
+        return queryset.order_by('-order', '-id').filter(order__lt=self.order)[0:1].get()
 
     def get_next(self):
         """
@@ -46,8 +57,8 @@ class OrderableModel(models.Model):
         Throws (or technically, allows to bubble up) the appropriate 
         ObjectDoesNotExist exception if the object does not exist.
         """
-        manager = self.__class__._default_manager
-        return manager.order_by('order', 'id').filter(order__gt=self.order)[0:1].get()
+        queryset = self._get_ordering_queryset()
+        return queryset.order_by('order', 'id').filter(order__gt=self.order)[0:1].get()
     
     class Meta:
         abstract = True

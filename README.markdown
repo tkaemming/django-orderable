@@ -36,6 +36,16 @@ appropriate solution (at least currently), such as objects that are ordered
 with respect to a related object, situations where the list_filter will be
 implemented, etc.
 
+## Test Server
+
+The test application can be run with the `manage-tests.sh` script in the root
+directory of the repository. (Please note that the script does need to be
+executed with the root as the repository as `$PWD`, or else the `$PYTHONPATH`
+environment variable will not be set correctly.) It takes any valid arguments
+to the environment's `django-admin.py` command. When creating the database, it
+creates a default superuser, with the username `admin` and password
+`password`, as well as some test data to play with in the administration panel.
+
 ## Authors
 
 * [Ted Kaemming](http://www.kaemming.com/)
