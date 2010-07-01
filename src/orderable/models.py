@@ -5,7 +5,7 @@ class OrderableModel(models.Model):
     """
     Provides basic facilities for ordered model instances.
     """
-    order = models.PositiveIntegerField(blank=True, null=True)
+    order = models.PositiveIntegerField(db_index=True, blank=True, null=True)
     
     def _get_ordering_queryset(self):
         """
