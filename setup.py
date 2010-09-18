@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 setup(
     name = 'django-orderable',
-    version = '1.2',
+    version = '1.2.1',
     description = 'Model ordering for the Django administration site.',
     
     author = 'Ted Kaemming',
