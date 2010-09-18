@@ -40,24 +40,28 @@ class OrderableModel(models.Model):
         
         super(OrderableModel, self).save(*args, **kwargs)
     
-    def get_previous(self):
+    def get_previous(self, queryset=None):
         """
         Return the previous model in order (if available).
         
         Throws (or technically, allows to bubble up) the appropriate 
         ObjectDoesNotExist exception if the object does not exist.
         """
-        queryset = self._get_ordering_queryset()
+        if queryset is None:
+            queryset = self._get_ordering_queryset()
+            
         return queryset.order_by('-order', '-id').filter(order__lt=self.order)[0:1].get()
 
-    def get_next(self):
+    def get_next(self, queryset=None):
         """
         Return the next model in order (if available).
         
         Throws (or technically, allows to bubble up) the appropriate 
         ObjectDoesNotExist exception if the object does not exist.
         """
-        queryset = self._get_ordering_queryset()
+        if queryset is None:
+            queryset = self._get_ordering_queryset()
+        
         return queryset.order_by('order', 'id').filter(order__gt=self.order)[0:1].get()
     
     class Meta:
