@@ -1,10 +1,17 @@
 {% extends "admin/change_list.html" %}
 {% load i18n %}
 
+{% block extrahead %}
+    {{ block.super }}
+    <script type="text/javascript">
+        window.ORDERING_FIELD = "{{ ordering_field }}";
+    </script>
+{% endblock %}
+
 {% block content_title %}
-  
+
   {{ block.super }}
-  
+
   {% block orderable_help_text %}
     <p class="help">{% blocktrans with cl.opts.verbose_name_plural as verbose_name_plural %}
 <strong>TIP:</strong> You can drag and drop the 

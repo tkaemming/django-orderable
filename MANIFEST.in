@@ -1,5 +1,5 @@
 include README.markdown
 include LICENSE.markdown
-recursive-include src/orderable/locale *
-recursive-include src/orderable/templates *.html
-recursive-include src/orderable/media *.js
+recursive-include orderable/locale *
+recursive-include orderable/templates *.html
+recursive-include orderable/media *.js

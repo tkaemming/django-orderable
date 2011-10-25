@@ -1,0 +1,190 @@
+[
+  {
+    "pk": 1, 
+    "model": "auth.user", 
+    "fields": {
+      "username": "admin", 
+      "first_name": "", 
+      "last_name": "", 
+      "is_active": true, 
+      "is_superuser": true, 
+      "is_staff": true, 
+      "last_login": "2011-10-25 16:53:37", 
+      "groups": [], 
+      "user_permissions": [], 
+      "password": "sha1$zPubEWK9UQP8$8531ac20ba29a6a73ed380753895f5aa6bad93ed", 
+      "email": "user@example.com", 
+      "date_joined": "2011-10-25 16:53:37"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "books.book", 
+    "fields": {
+      "title": "Dive into Python",
+      "order": 1
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 1, 
+      "title": "Installing Python",
+      "order": 1
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 1, 
+      "title": "Your First Python Program",
+      "order": 2
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 1, 
+      "title": "Native Datatypes",
+      "order": 3
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 1, 
+      "title": "The Power of Introspection",
+      "order": 4
+    }
+  }, 
+  {
+    "pk": 5, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 1, 
+      "title": "Objects and Object-Orientation",
+      "order": 5
+    }
+  }, 
+  {
+    "pk": 6, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 1, 
+      "title": "Exceptions and File Handling",
+      "order": 6
+    }
+  }, 
+  {
+    "pk": 7, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 1, 
+      "title": "Regular Expressions",
+      "order": 7
+    }
+  }, 
+  {
+    "pk": 8, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 1, 
+      "title": "HTML Processing",
+      "order": 8
+    }
+  }, 
+  {
+    "pk": 9, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 1, 
+      "title": "XML Processing",
+      "order": 9
+    }
+  }, 
+  {
+    "pk": 10, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 1, 
+      "title": "Scripts and Streams",
+      "order": 10
+    }
+  }, 
+  {
+    "pk": 11, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 1, 
+      "title": "HTTP Web Services",
+      "order": 11
+    }
+  }, 
+  {
+    "pk": 12, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 1, 
+      "title": "SOAP Web Services",
+      "order": 12
+    }
+  }, 
+  {
+    "pk": 13, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 1, 
+      "title": "Unit Testing",
+      "order": 13
+    }
+  }, 
+  {
+    "pk": 14, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 1, 
+      "title": "Test-First Programming",
+      "order": 14
+    }
+  }, 
+  {
+    "pk": 15, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 1, 
+      "title": "Refactoring",
+      "order": 15
+    }
+  }, 
+  {
+    "pk": 16, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 1, 
+      "title": "Functional Programming",
+      "order": 16
+    }
+  }, 
+  {
+    "pk": 17, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 1, 
+      "title": "Dynamic Functions",
+      "order": 17
+    }
+  }, 
+  {
+    "pk": 18, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 1, 
+      "title": "Performance Tuning",
+      "order": 18
+    }
+  }
+]
