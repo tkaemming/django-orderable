@@ -9,7 +9,7 @@
       "is_active": true, 
       "is_superuser": true, 
       "is_staff": true, 
-      "last_login": "2011-10-25 16:53:37", 
+      "last_login": "2011-10-25 18:37:49", 
       "groups": [], 
       "user_permissions": [], 
       "password": "sha1$zPubEWK9UQP8$8531ac20ba29a6a73ed380753895f5aa6bad93ed", 
@@ -21,8 +21,16 @@
     "pk": 1, 
     "model": "books.book", 
     "fields": {
-      "title": "Dive into Python",
-      "order": 1
+      "order": 1, 
+      "title": "Dive into Python"
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "books.book", 
+    "fields": {
+      "order": 2, 
+      "title": "Learn Python the Hard Way"
     }
   }, 
   {
@@ -30,8 +38,8 @@
     "model": "books.chapter", 
     "fields": {
       "book": 1, 
-      "title": "Installing Python",
-      "order": 1
+      "order": 1, 
+      "title": "Installing Python"
     }
   }, 
   {
@@ -39,8 +47,8 @@
     "model": "books.chapter", 
     "fields": {
       "book": 1, 
-      "title": "Your First Python Program",
-      "order": 2
+      "order": 2, 
+      "title": "Your First Python Program"
     }
   }, 
   {
@@ -48,8 +56,8 @@
     "model": "books.chapter", 
     "fields": {
       "book": 1, 
-      "title": "Native Datatypes",
-      "order": 3
+      "order": 3, 
+      "title": "Native Datatypes"
     }
   }, 
   {
@@ -57,8 +65,8 @@
     "model": "books.chapter", 
     "fields": {
       "book": 1, 
-      "title": "The Power of Introspection",
-      "order": 4
+      "order": 4, 
+      "title": "The Power of Introspection"
     }
   }, 
   {
@@ -66,8 +74,8 @@
     "model": "books.chapter", 
     "fields": {
       "book": 1, 
-      "title": "Objects and Object-Orientation",
-      "order": 5
+      "order": 5, 
+      "title": "Objects and Object-Orientation"
     }
   }, 
   {
@@ -75,8 +83,8 @@
     "model": "books.chapter", 
     "fields": {
       "book": 1, 
-      "title": "Exceptions and File Handling",
-      "order": 6
+      "order": 6, 
+      "title": "Exceptions and File Handling"
     }
   }, 
   {
@@ -84,8 +92,8 @@
     "model": "books.chapter", 
     "fields": {
       "book": 1, 
-      "title": "Regular Expressions",
-      "order": 7
+      "order": 7, 
+      "title": "Regular Expressions"
     }
   }, 
   {
@@ -93,8 +101,8 @@
     "model": "books.chapter", 
     "fields": {
       "book": 1, 
-      "title": "HTML Processing",
-      "order": 8
+      "order": 8, 
+      "title": "HTML Processing"
     }
   }, 
   {
@@ -102,8 +110,8 @@
     "model": "books.chapter", 
     "fields": {
       "book": 1, 
-      "title": "XML Processing",
-      "order": 9
+      "order": 9, 
+      "title": "XML Processing"
     }
   }, 
   {
@@ -111,8 +119,8 @@
     "model": "books.chapter", 
     "fields": {
       "book": 1, 
-      "title": "Scripts and Streams",
-      "order": 10
+      "order": 10, 
+      "title": "Scripts and Streams"
     }
   }, 
   {
@@ -120,8 +128,8 @@
     "model": "books.chapter", 
     "fields": {
       "book": 1, 
-      "title": "HTTP Web Services",
-      "order": 11
+      "order": 11, 
+      "title": "HTTP Web Services"
     }
   }, 
   {
@@ -129,8 +137,8 @@
     "model": "books.chapter", 
     "fields": {
       "book": 1, 
-      "title": "SOAP Web Services",
-      "order": 12
+      "order": 12, 
+      "title": "SOAP Web Services"
     }
   }, 
   {
@@ -138,8 +146,8 @@
     "model": "books.chapter", 
     "fields": {
       "book": 1, 
-      "title": "Unit Testing",
-      "order": 13
+      "order": 13, 
+      "title": "Unit Testing"
     }
   }, 
   {
@@ -147,8 +155,8 @@
     "model": "books.chapter", 
     "fields": {
       "book": 1, 
-      "title": "Test-First Programming",
-      "order": 14
+      "order": 14, 
+      "title": "Test-First Programming"
     }
   }, 
   {
@@ -156,8 +164,8 @@
     "model": "books.chapter", 
     "fields": {
       "book": 1, 
-      "title": "Refactoring",
-      "order": 15
+      "order": 15, 
+      "title": "Refactoring"
     }
   }, 
   {
@@ -165,8 +173,8 @@
     "model": "books.chapter", 
     "fields": {
       "book": 1, 
-      "title": "Functional Programming",
-      "order": 16
+      "order": 16, 
+      "title": "Functional Programming"
     }
   }, 
   {
@@ -174,8 +182,8 @@
     "model": "books.chapter", 
     "fields": {
       "book": 1, 
-      "title": "Dynamic Functions",
-      "order": 17
+      "order": 17, 
+      "title": "Dynamic Functions"
     }
   }, 
   {
@@ -183,8 +191,512 @@
     "model": "books.chapter", 
     "fields": {
       "book": 1, 
-      "title": "Performance Tuning",
-      "order": 18
+      "order": 18, 
+      "title": "Performance Tuning"
+    }
+  }, 
+  {
+    "pk": 19, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 2, 
+      "order": 1, 
+      "title": "The Hard Way Is Easier"
+    }
+  }, 
+  {
+    "pk": 20, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 2, 
+      "order": 2, 
+      "title": "The Setup"
+    }
+  }, 
+  {
+    "pk": 21, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 2, 
+      "order": 3, 
+      "title": "A Good First Program"
+    }
+  }, 
+  {
+    "pk": 22, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 2, 
+      "order": 4, 
+      "title": "Comments And Pound Characters"
+    }
+  }, 
+  {
+    "pk": 23, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 2, 
+      "order": 5, 
+      "title": "Numbers And Math"
+    }
+  }, 
+  {
+    "pk": 24, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 2, 
+      "order": 6, 
+      "title": "Variables And Names"
+    }
+  }, 
+  {
+    "pk": 25, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 2, 
+      "order": 7, 
+      "title": "More Variables And Printing"
+    }
+  }, 
+  {
+    "pk": 26, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 2, 
+      "order": 8, 
+      "title": "Strings And Text"
+    }
+  }, 
+  {
+    "pk": 27, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 2, 
+      "order": 9, 
+      "title": "More Printing"
+    }
+  }, 
+  {
+    "pk": 28, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 2, 
+      "order": 10, 
+      "title": "Printing, Printing"
+    }
+  }, 
+  {
+    "pk": 29, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 2, 
+      "order": 11, 
+      "title": "Printing, Printing, Printing"
+    }
+  }, 
+  {
+    "pk": 30, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 2, 
+      "order": 12, 
+      "title": "What Was That?"
+    }
+  }, 
+  {
+    "pk": 31, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 2, 
+      "order": 13, 
+      "title": "Asking Questions"
+    }
+  }, 
+  {
+    "pk": 32, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 2, 
+      "order": 14, 
+      "title": "Prompting People"
+    }
+  }, 
+  {
+    "pk": 33, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 2, 
+      "order": 15, 
+      "title": "Parameters, Unpacking, Variables"
+    }
+  }, 
+  {
+    "pk": 34, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 2, 
+      "order": 16, 
+      "title": "Prompting And Passing"
+    }
+  }, 
+  {
+    "pk": 35, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 2, 
+      "order": 17, 
+      "title": "Reading Files"
+    }
+  }, 
+  {
+    "pk": 36, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 2, 
+      "order": 18, 
+      "title": "Reading And Writing Files"
+    }
+  }, 
+  {
+    "pk": 37, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 2, 
+      "order": 19, 
+      "title": "More Files"
+    }
+  }, 
+  {
+    "pk": 38, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 2, 
+      "order": 20, 
+      "title": "Names, Variables, Code, Functions"
+    }
+  }, 
+  {
+    "pk": 39, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 2, 
+      "order": 21, 
+      "title": "Functions And Variables"
+    }
+  }, 
+  {
+    "pk": 40, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 2, 
+      "order": 22, 
+      "title": "Functions And Files"
+    }
+  }, 
+  {
+    "pk": 41, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 2, 
+      "order": 23, 
+      "title": "Functions Can Return Something"
+    }
+  }, 
+  {
+    "pk": 42, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 2, 
+      "order": 24, 
+      "title": "What Do You Know So Far?"
+    }
+  }, 
+  {
+    "pk": 43, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 2, 
+      "order": 25, 
+      "title": "Read Some Code"
+    }
+  }, 
+  {
+    "pk": 44, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 2, 
+      "order": 26, 
+      "title": "More Practice"
+    }
+  }, 
+  {
+    "pk": 45, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 2, 
+      "order": 27, 
+      "title": "Even More Practice"
+    }
+  }, 
+  {
+    "pk": 46, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 2, 
+      "order": 28, 
+      "title": "Congratulations, Take A Test!"
+    }
+  }, 
+  {
+    "pk": 47, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 2, 
+      "order": 29, 
+      "title": "Memorizing Logic"
+    }
+  }, 
+  {
+    "pk": 48, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 2, 
+      "order": 30, 
+      "title": "Boolean Practice"
+    }
+  }, 
+  {
+    "pk": 49, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 2, 
+      "order": 31, 
+      "title": "What If"
+    }
+  }, 
+  {
+    "pk": 50, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 2, 
+      "order": 32, 
+      "title": "Else And If"
+    }
+  }, 
+  {
+    "pk": 51, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 2, 
+      "order": 33, 
+      "title": "Making Decisions"
+    }
+  }, 
+  {
+    "pk": 52, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 2, 
+      "order": 34, 
+      "title": "Loops And Lists"
+    }
+  }, 
+  {
+    "pk": 53, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 2, 
+      "order": 35, 
+      "title": "While Loops"
+    }
+  }, 
+  {
+    "pk": 54, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 2, 
+      "order": 36, 
+      "title": "Accessing Elements Of Lists"
+    }
+  }, 
+  {
+    "pk": 55, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 2, 
+      "order": 37, 
+      "title": "Branches and Functions"
+    }
+  }, 
+  {
+    "pk": 56, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 2, 
+      "order": 38, 
+      "title": "Designing and Debugging"
+    }
+  }, 
+  {
+    "pk": 57, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 2, 
+      "order": 39, 
+      "title": "Symbol Review"
+    }
+  }, 
+  {
+    "pk": 58, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 2, 
+      "order": 40, 
+      "title": "Reading Code"
+    }
+  }, 
+  {
+    "pk": 59, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 2, 
+      "order": 41, 
+      "title": "Doing Things To Lists"
+    }
+  }, 
+  {
+    "pk": 60, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 2, 
+      "order": 42, 
+      "title": "Dictionaries, Oh Lovely Dictionaries"
+    }
+  }, 
+  {
+    "pk": 61, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 2, 
+      "order": 43, 
+      "title": "Gothons From Planet Percal #25"
+    }
+  }, 
+  {
+    "pk": 62, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 2, 
+      "order": 44, 
+      "title": "Gothons Are Getting Classy"
+    }
+  }, 
+  {
+    "pk": 63, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 2, 
+      "order": 45, 
+      "title": "You Make A Game"
+    }
+  }, 
+  {
+    "pk": 64, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 2, 
+      "order": 46, 
+      "title": "Evaluating Your Game"
+    }
+  }, 
+  {
+    "pk": 65, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 2, 
+      "order": 47, 
+      "title": "Is-A, Has-A, Objects, and Classes"
+    }
+  }, 
+  {
+    "pk": 66, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 2, 
+      "order": 48, 
+      "title": "A Project Skeleton"
+    }
+  }, 
+  {
+    "pk": 67, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 2, 
+      "order": 49, 
+      "title": "Automated Testing"
+    }
+  }, 
+  {
+    "pk": 68, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 2, 
+      "order": 50, 
+      "title": "Advanced User Input"
+    }
+  }, 
+  {
+    "pk": 69, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 2, 
+      "order": 51, 
+      "title": "Making Sentences"
+    }
+  }, 
+  {
+    "pk": 70, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 2, 
+      "order": 52, 
+      "title": "Your First Website"
+    }
+  }, 
+  {
+    "pk": 71, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 2, 
+      "order": 53, 
+      "title": "Getting Input From A Browser"
+    }
+  }, 
+  {
+    "pk": 72, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 2, 
+      "order": 54, 
+      "title": "The Start Of Your Web Game"
+    }
+  }, 
+  {
+    "pk": 73, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 2, 
+      "order": 55, 
+      "title": "Next Steps"
+    }
+  }, 
+  {
+    "pk": 74, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 2, 
+      "order": 56, 
+      "title": "Advice From An Old Programmer"
     }
   }
 ]
