@@ -10,8 +10,8 @@ urlpatterns = patterns('',
         view  = include(site.urls),
     ),
     url(
-        regex  = r'^%s(?P<path>.*)$' % settings.MEDIA_URL[1:], 
+        regex  = r'^%s(?P<path>.*)$' % settings.STATIC_URL[1:], 
         view   = 'django.views.static.serve', 
-        kwargs = {'document_root': settings.MEDIA_ROOT}
+        kwargs = {'document_root': settings.STATIC_URL}
     ),
 )

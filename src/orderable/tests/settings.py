@@ -21,5 +21,5 @@ INSTALLED_APPS = (
 
 ROOT_URLCONF = 'orderable.tests.urls'
 
-MEDIA_ROOT = os.path.join(ORDERABLE_ROOT, 'media')
-MEDIA_URL = '/static/'
+STATIC_ROOT = os.path.join(ORDERABLE_ROOT, 'static')
+STATIC_URL = '/static/'
