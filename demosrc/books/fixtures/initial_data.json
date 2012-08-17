@@ -1,0 +1,117 @@
+[
+  {
+    "pk": 1, 
+    "model": "books.book", 
+    "fields": {
+      "pages": 42, 
+      "author": "John Doe", 
+      "order": 1, 
+      "title": "An Book"
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "books.book", 
+    "fields": {
+      "pages": 99, 
+      "author": "Derp Masterson", 
+      "order": 2, 
+      "title": "Another Book"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 1, 
+      "order": 1, 
+      "title": "The First"
+    }
+  }, 
+  {
+    "pk": 5, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 2, 
+      "order": 1, 
+      "title": "1: Lorem Ipsum"
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 1, 
+      "order": 2, 
+      "title": "And The Second"
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 2, 
+      "order": 2, 
+      "title": "2: Sit Amet"
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "books.chapter", 
+    "fields": {
+      "book": 1, 
+      "order": 3, 
+      "title": "Chapter The Third"
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "books.review", 
+    "fields": {
+      "rating": 100, 
+      "review": "Cras erat nunc, semper id pulvinar non, pharetra id velit. Mauris non tortor vitae ante tempor aliquam. Donec nec ligula varius dolor tempor pretium. Fusce est ligula, mollis at egestas ac, varius nec mauris. Nam elementum, urna nec pulvinar elementum, erat nisl vestibulum justo, at condimentum mauris elit eget ante.", 
+      "book": 1, 
+      "order": 1
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "books.review", 
+    "fields": {
+      "rating": 0, 
+      "review": "Fusce commodo lacus et arcu ullamcorper nec iaculis neque ultrices. Sed luctus porttitor ultricies. Morbi et lorem eu est adipiscing dapibus vel sed eros. Donec porttitor orci eu velit convallis at ultricies quam elementum. Nulla bibendum consequat tortor quis pretium. Ut rutrum rutrum dolor at ultricies. Mauris eu magna quis enim pharetra ullamcorper sit amet placerat purus", 
+      "book": 1, 
+      "order": 2
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "books.review", 
+    "fields": {
+      "rating": 75, 
+      "review": "In hac habitasse platea dictumst. Nulla erat enim, fringilla rutrum mattis non, laoreet blandit massa. Morbi porta rhoncus mattis. Nam imperdiet bibendum ipsum ut accumsan. Mauris in massa arcu, vel mattis lacus. Ut cursus lobortis bibendum. Suspendisse a quam in lectus condimentum sagittis non at ipsum.", 
+      "book": 1, 
+      "order": 3
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "books.review", 
+    "fields": {
+      "rating": 0, 
+      "review": "Nam adipiscing erat ut lacus dapibus facilisis imperdiet metus porttitor. Morbi tempor, leo rutrum semper laoreet, lacus orci convallis mi, ut blandit enim arcu sed ante.", 
+      "book": 2, 
+      "order": 4
+    }
+  }, 
+  {
+    "pk": 5, 
+    "model": "books.review", 
+    "fields": {
+      "rating": 10, 
+      "review": "Duis sed massa arcu, at venenatis magna. Nunc aliquet enim vitae quam porttitor eget placerat dolor congue. Ut elementum justo sed purus pharetra elementum. ", 
+      "book": 2, 
+      "order": 5
+    }
+  }
+]

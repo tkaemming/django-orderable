@@ -53,12 +53,12 @@
                 if (inline.is(':has(.tabular)')) {
                     // Hide the unnecessary, ordering fields.
                     inline.find('th:contains(Order)').hide();
-                    inline.find('td.original').hide();
-                    inline.find('input[name$="-order"]').closest('td').hide();
-                    inline.find('tbody tr.has_original').removeClass('has_original');
-                    inline.find('tbody tr').css('cursor', 'move');
+                    inline.find('td.order, td.field-order').hide();
+                    inline.find('tbody tr:not(.add-row)').css('cursor', 'move');
                     
                     inline.find('tbody').sortable({
+                        'items': 'tr:not(.add-row)',
+                        'cancel': 'tr.add-row',
                         'update': function (event, ui) {
                             var rows = inline.find('tbody tr');
                             rows.each(function (i) {
@@ -69,14 +69,26 @@
                             rows.filter(':even').addClass('row1').removeClass('row2');
                             rows.filter(':odd').addClass('row2').removeClass('row1');
                         }
+                    }).bind('click.sortable mousedown.sortable',function(ev){
+                        // Allow inputs to focus under the sortable.
+                        ev.target.focus();
+                        /*TODO
+                        if (ev.target.tagName === "INPUT") {
+                            // Disable sortable (allow dragging within input
+                            // so we can edit text)
+                            ev.stopPropogation();
+                        }
+                        */
                     });
                 }
                 // Stacked Inlines
                 else {
-                    inline.find('.form-row.order').hide();
+                    inline.find('.form-row.order, .form-row.field-order').hide();
                     inline.find('.inline-group h3').css('cursor', 'move');
                     
                     inline.find('.inline-group').sortable({
+                        'items': 'div.inline-related:not(.add-row):not(.empty-form)',
+                        'cancel': 'div.add-row',
                         'handle': 'h3',
                         'update': function (event, ui) {
                             var forms = inline.find('.inline-related');

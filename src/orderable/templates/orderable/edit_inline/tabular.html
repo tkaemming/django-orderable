@@ -1,3 +1,13 @@
+{% load i18n %}
+  {% block orderable_help_text %}
+    <p class="help" style="margin-top:2em;margin-bottom:-0.5em">{% blocktrans %}
+<strong>TIP:</strong> You can drag and drop the 
+<span id="verbose-name-plural">items</span> 
+in this list to change their order on the site &mdash; just be sure to 
+click the Save button in the lower right of the page when you're done!
+{% endblocktrans %}</p>
+  {% endblock %}
+
 <div class="orderable">
   {% include "admin/edit_inline/tabular.html" %}
 </div>

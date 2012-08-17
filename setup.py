@@ -3,12 +3,12 @@ from setuptools import setup, find_packages
 
 setup(
     name = 'django-orderable',
-    version = '1.2.1',
+    version = '1.3',
     description = 'Model ordering for the Django administration site.',
     
     author = 'Ted Kaemming',
     author_email = 'ted@kaemming.com',
-    url = 'http://www.github.com/tkaemming/django-orderable/',
+    url = 'https://github.com/tkaemming/django-orderable/',
     
     packages = find_packages('src'),
     package_dir = {'': 'src'},
@@ -17,7 +17,7 @@ setup(
             'templates/orderable/change_list.html',
             'templates/orderable/edit_inline/stacked.html',
             'templates/orderable/edit_inline/tabular.html',
-            'media/orderable/orderable.js',
+            'static/orderable/orderable.js',
             'locale/*/LC_MESSAGES/django.*',
         ]
     },

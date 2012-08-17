@@ -2,4 +2,4 @@ include README.markdown
 include LICENSE.markdown
 recursive-include src/orderable/locale *
 recursive-include src/orderable/templates *.html
-recursive-include src/orderable/media *.js
+recursive-include src/orderable/static *.js

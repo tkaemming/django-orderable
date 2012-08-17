@@ -1,12 +1,16 @@
 from django.core.exceptions import ObjectDoesNotExist
 from django.db import models
 
-class OrderableModel(models.Model):
+
+class BaseOrderableModel(models.Model):
     """
     Provides basic facilities for ordered model instances.
+
+    Any subclassing model will need to define a `order` PositiveIntegerField.
     """
-    order = models.PositiveIntegerField(db_index=True, blank=True, null=True)
-    
+    class Meta:
+        abstract = True
+
     def _get_ordering_queryset(self):
         """
         Returns the queryset used for model ordering. 
@@ -38,7 +42,7 @@ class OrderableModel(models.Model):
         if self.order is None:
             self.order = 1
         
-        super(OrderableModel, self).save(*args, **kwargs)
+        super(BaseOrderableModel, self).save(*args, **kwargs)
     
     def get_previous(self, queryset=None):
         """
@@ -63,7 +67,16 @@ class OrderableModel(models.Model):
             queryset = self._get_ordering_queryset()
         
         return queryset.order_by('order', 'id').filter(order__gt=self.order)[0:1].get()
-    
+
+
+class OrderableModel(BaseOrderableModel):
+    """
+    Provides basic facilities for ordered model instances.
+
+    This remains for backward-compatibility.
+    """
     class Meta:
         abstract = True
         ordering = ('order',)
+
+    order = models.PositiveIntegerField(db_index=True, blank=True, null=True)

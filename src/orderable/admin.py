@@ -1,8 +1,9 @@
 import posixpath
 from django import forms
 from django.contrib import admin
+from django.contrib.staticfiles.storage import staticfiles_storage
 
-from orderable.settings import JQUERY_URL, JQUERYUI_URL, ORDERABLE_MEDIA_URL
+from orderable.settings import JQUERY_URL, JQUERYUI_URL
 
 class OrderableAdmin(admin.ModelAdmin):
     exclude = ('order',)
@@ -12,8 +13,11 @@ class OrderableAdmin(admin.ModelAdmin):
     change_list_template = 'orderable/change_list.html'
     
     class Media:
-        js = (JQUERY_URL, JQUERYUI_URL,
-              posixpath.join(ORDERABLE_MEDIA_URL, 'orderable/orderable.js'))
+        js = (
+            JQUERY_URL,
+            JQUERYUI_URL,
+            staticfiles_storage.url('orderable/orderable.js')
+        )
     
     def __init__(self, *args, **kwargs):
         super(OrderableAdmin, self).__init__(*args, **kwargs)
@@ -27,8 +31,11 @@ class OrderableAdmin(admin.ModelAdmin):
 class OrderableInline(object):
 
     class Media:
-        js = (JQUERY_URL, JQUERYUI_URL,
-              posixpath.join(ORDERABLE_MEDIA_URL, 'orderable/orderable.js'))
+        js = (
+            JQUERY_URL,
+            JQUERYUI_URL,
+            staticfiles_storage.url('orderable/orderable.js')
+        )
 
 class OrderableStackedInline(OrderableInline, admin.StackedInline):
     template = 'orderable/edit_inline/stacked.html'
