@@ -1,5 +1,6 @@
 .DS_Store
 *.pyc
+*.sw*
 
 test.db
 

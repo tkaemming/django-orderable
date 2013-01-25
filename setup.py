@@ -17,7 +17,7 @@ setup(
             'templates/orderable/change_list.html',
             'templates/orderable/edit_inline/stacked.html',
             'templates/orderable/edit_inline/tabular.html',
-            'media/orderable/orderable.js',
+            'static/orderable/orderable.js',
             'locale/*/LC_MESSAGES/django.*',
         ]
     },
