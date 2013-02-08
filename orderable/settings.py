@@ -17,4 +17,4 @@ if not is_valid(JQUERYUI_URL):
     JQUERYUI_URL = posixpath.join(settings.MEDIA_URL, JQUERYUI_URL)
 
 ORDERABLE_MEDIA_URL = getattr(settings, 'ORDERABLE_MEDIA_URL',
-    settings.MEDIA_URL)
+    settings.STATIC_URL)

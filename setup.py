@@ -10,14 +10,13 @@ setup(
     author_email = 'ted@kaemming.com',
     url = 'http://www.github.com/tkaemming/django-orderable/',
     
-    packages = find_packages('src'),
-    package_dir = {'': 'src'},
+    packages = ['orderable'],
     package_data = {
         'orderable': [
             'templates/orderable/change_list.html',
             'templates/orderable/edit_inline/stacked.html',
             'templates/orderable/edit_inline/tabular.html',
-            'media/orderable/orderable.js',
+            'static/orderable/orderable.js',
             'locale/*/LC_MESSAGES/django.*',
         ]
     },
