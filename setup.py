@@ -10,8 +10,7 @@ setup(
     author_email = 'ted@kaemming.com',
     url = 'http://www.github.com/tkaemming/django-orderable/',
     
-    packages = find_packages('src'),
-    package_dir = {'': 'src'},
+    packages = ['orderable']
     package_data = {
         'orderable': [
             'templates/orderable/change_list.html',
