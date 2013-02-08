@@ -11,15 +11,15 @@ setup(
     url = 'http://www.github.com/tkaemming/django-orderable/',
     
     packages = ['orderable']
-    package_data = {
-        'orderable': [
-            'templates/orderable/change_list.html',
-            'templates/orderable/edit_inline/stacked.html',
-            'templates/orderable/edit_inline/tabular.html',
-            'static/orderable/orderable.js',
-            'locale/*/LC_MESSAGES/django.*',
-        ]
-    },
+#    package_data = {
+#        'orderable': [
+#            'templates/orderable/change_list.html',
+#            'templates/orderable/edit_inline/stacked.html',
+#            'templates/orderable/edit_inline/tabular.html',
+#            'static/orderable/orderable.js',
+#            'locale/*/LC_MESSAGES/django.*',
+#        ]
+#    },
     
     install_requires = ['setuptools'],
     zip_safe = False
